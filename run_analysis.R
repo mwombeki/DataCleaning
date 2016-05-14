@@ -21,10 +21,7 @@ combineddata <- rbind(testdatabind,trainingdatabind)
 
 # extracting only the Mean and STD datasets
 stdmeandata <- combineddata[,grepl("std|mean", colnames(combineddata), ignore.case = TRUE)]
+#gsub("^t","", colnames(combineddata))
 
 # creating the mean for each activity and subject
-tidydatamean <- colMeans(stdmeandata)
-
-
-gsub("^t","", colnames(combineddata))
-gsub("()","", colnames(combineddata))
+tidydatamean <- write.table(colMeans(stdmeandata), row.names = FALSE)
