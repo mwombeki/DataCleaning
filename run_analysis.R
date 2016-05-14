@@ -24,4 +24,6 @@ stdmeandata <- combineddata[,grepl("std|mean", colnames(combineddata), ignore.ca
 #gsub("^t","", colnames(combineddata))
 
 # creating the mean for each activity and subject
-tidydatamean <- write.table(colMeans(stdmeandata), row.names = FALSE)
+write.table(colMeans(stdmeandata), file = "tidydatamean", row.names = FALSE)
+
+

@@ -1,4 +1,4 @@
-This file provides a guidelne for the analusi
+This file provides a guidelne for the analysis
 ======================================
 
 The dataset includes the following files:
@@ -12,9 +12,10 @@ run_analysis : main code file that runs does the following
 
 CodeBook.md : The file that lists all the codes as use in the rin_analysis.R file
 
+UCI HAR Dataset: original files for analysis
 
 Notes: 
-======
+________
 The files analyse data from Human Activity Recognition Using Smartphones Dataset by 
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 

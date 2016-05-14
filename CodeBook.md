@@ -1,7 +1,5 @@
-Referenced FileName: run_anaysis.R
+FileName: run_anaysis.R
 
-
-codes used on the run_analyis.R file:
 __________________________________________________________________________________
                       The following are codes used in the analysis 
 __________________________________________________________________________________
