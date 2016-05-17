@@ -1,4 +1,4 @@
-FileName: run_anaysis.R
+### FileName: run_anaysis.R
 ====================================================================================
                       The following are codes used in the analysis 
 ====================================================================================
@@ -11,7 +11,7 @@ FileName: run_anaysis.R
 7. combineddata:   Combined test and trainign files
 8. stdmeandata:    Extracted only the Mean and STD datasets
 9. tidydatamean : Mean of the second files created
-10. tidy_data   : tidy Data
-
+10. tidy_data   : tidy Data file created for second reading
+11. means       MEans by activity and levels
 
 ====================================================================================
