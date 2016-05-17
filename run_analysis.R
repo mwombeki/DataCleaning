@@ -21,9 +21,25 @@ combineddata <- rbind(testdatabind,trainingdatabind)
 
 # extracting only the Mean and STD datasets
 stdmeandata <- combineddata[,grepl("std|mean", colnames(combineddata), ignore.case = TRUE)]
-#gsub("^t","", colnames(combineddata))
 
-# creating the mean for each activity and subject
-write.table(colMeans(stdmeandata), file = "tidydatamean", row.names = FALSE)
+# Load, combine, and rename the participant testing and training data
+subject_train <- read.table('./UCI HAR Dataset/train/subject_train.txt')
+subject_test <- read.table('./UCI HAR Dataset/test/subject_test.txt')
+subject_combined <- rbind(subject_train, subject_test)
+names(subject_combined) <- "SubjectID"
+
+
+labels_train <- read.table('./UCI HAR Dataset/train/y_train.txt')
+labels_test <- read.table('./UCI HAR Dataset/test/y_test.txt')
+labels_combined <- rbind(labels_train, labels_test)
+names(labels_combined) <- "ActivityID"
+
+activities <- read.table('./UCI HAR Dataset/activity_labels.txt',
+                        col.names = c("ActivityID", "ActivityLabel"))
+
+tidy <- data.table(combineddata)
+means <- tidy[,lapply(.SD, mean), by=c("SubjectID", "ActivityLabel")]
+write.table(means, "tidy_data.txt", row.name = FALSE)
+write.table(colMeans(means), file = "tidy_data", row.names = FALSE)
 
 
