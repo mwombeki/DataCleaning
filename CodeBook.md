@@ -1,17 +1,17 @@
 FileName: run_anaysis.R
-
-__________________________________________________________________________________
+====================================================================================
                       The following are codes used in the analysis 
-__________________________________________________________________________________
-testdata:       Test data files read
-trainingdata :  Traininng data files read
-headers :       Extracted Headers for attributes 
-ValNames:       Extracted headers for the read attribues 
-testdatabind :  binding all data files from from the testdata
-trainingdatabind : Binding all data files from from the trainingdata
-combineddata:   Combined test and trainign files
-stdmeandata:    Extracted only the Mean and STD datasets
+====================================================================================
+1. testdata:       Test data files read
+2. trainingdata :  Traininng data files read
+3. headers :       Extracted Headers for attributes 
+4. ValNames:       Extracted headers for the read attribues 
+5. testdatabind :  binding all data files from from the testdata
+6. trainingdatabind : Binding all data files from from the trainingdata
+7. combineddata:   Combined test and trainign files
+8. stdmeandata:    Extracted only the Mean and STD datasets
+9. tidydatamean : Mean of the second files created
+10. tidy_data   : tidy Data
 
-tidydatamean : Mean of the second files created
 
 ====================================================================================

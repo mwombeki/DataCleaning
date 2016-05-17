@@ -37,6 +37,9 @@ names(labels_combined) <- "ActivityID"
 activities <- read.table('./UCI HAR Dataset/activity_labels.txt',
                         col.names = c("ActivityID", "ActivityLabel"))
 
+features <- read.table('./UCI HAR Dataset/features.txt',
+                       col.names = c("FeatureID", "FeatureLabel"))
+# Tidy Data secind file
 tidy <- data.table(combineddata)
 means <- tidy[,lapply(.SD, mean), by=c("SubjectID", "ActivityLabel")]
 write.table(means, "tidy_data.txt", row.name = FALSE)
